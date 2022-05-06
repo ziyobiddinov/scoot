@@ -1,0 +1,132 @@
+.intro {
+    background: url("../img/intro-img.jpg") no-repeat center;
+    background-size: cover; 
+}
+.intro__wrapper {
+    margin-top: 97px;
+
+}
+
+
+.intro__container {
+    padding-top: 153px;
+    padding-bottom: 152px;
+}
+.intro__content {
+    width: 500px;
+    color: #fff;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 234px;
+        height: 63px;
+        background: url("../img/circles.svg") no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 255px;
+        right: -760px; 
+    }
+}
+.intro__title {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    margin: 0;
+}
+.intro__action {
+    position: relative;
+    padding-left: 95px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 203px;
+        height: 12px;
+        background: url("../img/intro-line.svg") no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: 80px;
+        left: -144px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 447px;
+        height: 138px;
+        background: url("../img/intro-lines.svg") no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: 79px;
+        right: -487px;
+    }
+}
+.intro__descreption {
+    @include text;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+}
+@media screen and (max-width: $tablet) {
+    .intro {
+        background: url("../img/intro-img-tablet.jpg") no-repeat center;
+        background-size: cover;
+    }
+    .intro__container {
+        padding-top: 137px;
+        padding-bottom: 217px;
+        text-align: center;
+    }
+    .intro__content {
+        width: 573px;
+        display: inline-block;
+
+        &::after {
+            display: none;
+        }
+    }
+    .intro__action {
+        padding-left: 0;
+    
+        &::before {
+            display: none;
+        }
+        &::after {
+            position: absolute;
+            top: 230px;
+            left: -210px;
+        }
+    }
+    .intro__descreption {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}
+@media screen and (max-width: $mobile) {
+    .intro {
+        background: url("../img/intro-img-mobile.jpg") no-repeat center;
+        background-size: cover;
+    }
+   
+    .intro__wrapper {
+        margin-top: 64px;
+    }
+    .intro__container {
+        padding-top: 115px;
+        padding-bottom: 179px;
+    }
+    .intro__content {
+        width: 100%
+    }
+    .intro__action::after {
+        position: absolute;
+        top: 190px;
+        left: -400px;
+    }
+    .intro__title {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.78571px;
+    }
+}

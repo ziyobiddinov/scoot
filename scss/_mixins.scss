@@ -1,0 +1,18 @@
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+@mixin font {
+    font-family: "Lexend Deca", Arial, sans-serif;
+    font-weight: normal;
+}
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin text {
+    @include font;
+    color: $grey;
+    margin: 0;    
+}

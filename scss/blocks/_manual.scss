@@ -1,0 +1,150 @@
+.manual__container {
+    padding-top: 160px;
+    padding-bottom: 200px;
+}
+.manual__list {
+    @include reset-list;
+    @include flex;
+    flex-wrap: nowrap;
+    position: relative; 
+
+    &::before {
+        content: "";
+        display: block;
+        width: 973px;
+        height: 1px;
+        border: 7px solid #E5ECF4;
+        background-color: #E5ECF4;
+        position: absolute;
+        left: -165px;
+        top: 41px;
+        z-index: -1;
+    }
+}
+.manual__item {
+    width: 350px;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 96px;
+        height: 96px;
+        background-color: $yellow;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+}
+.manual__item--app::before {
+    background-image: url("../img/app.svg");
+}
+.manual__item--scooter::before {
+    background-image: url("../img/scooter.svg");
+}
+.manual__item--ride::before {
+    background-image: url("../img/ride.svg");
+}
+
+.manual__item-title {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    color: $accent-color;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 27px;
+}
+.manual__item-descreption {
+    @include text;
+}
+@media screen and (max-width: $tablet) {   
+    .manual__container {
+        padding-top: 122px;
+        padding-bottom: 145px;
+    } 
+    .manual__list {
+        flex-wrap: wrap; 
+    
+        &::before {
+            width: 512px;
+            height: 1px;
+            transform: rotate(90deg);
+            position: absolute;
+            left: -208px;
+            top: 120px;
+            z-index: -1;
+        }
+    }
+    .manual__item {
+        width: 573px;
+        margin-right: 0;
+        padding-bottom: 40px;
+        position: relative;
+    
+        &:last-child {
+            padding-bottom: 0;
+        }
+    
+        &::before {
+            position: absolute;
+        }
+    }
+    .manual__action {
+        padding-left: 175px;
+    }
+    .manual__item-title {
+        padding-top: 0;
+    }
+  
+}
+@media screen and (max-width: $mobile) {
+    .manual__container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .manual__list {
+       text-align: center;
+    
+        &::before {
+            display: none;
+        }
+    }
+    .manual__item {
+        width: 100%;
+        padding-bottom: 48x;
+    
+        &:last-child {
+            padding-bottom: 0;
+        }
+    
+        &::before {
+            width: 56px;
+            height: 56px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .manual__item--app::before {
+        background-image: url("../img/app-mobile.svg");
+    }
+    .manual__item--scooter::before {
+        background-image: url("../img/scooter-mobile.svg");
+    }
+    .manual__item--ride::before {
+        background-image: url("../img/ride-mobile.svg");
+    }
+    .manual__action {
+        padding-left: 0;
+    }
+    .manual__item-title {
+        font-size: 20px;
+        padding-top: 80px;
+        padding-bottom: 24px;
+    }
+}

@@ -1,0 +1,201 @@
+.good__wrapper {
+    overflow: hidden;
+}
+.good__list {
+    @include reset-list;
+    padding-bottom: 329px;
+}
+.good__list--pb {
+    padding-bottom: 120px;
+}
+.good__item {
+    @include flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 160px;
+    position: relative;
+
+    &:nth-child(2n),
+    &::after {
+        flex-direction: row-reverse;
+    }
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 740px;
+        height: 150px;
+        background: url("../img/liens.svg") no-repeat center;
+        position: absolute;
+        right: -165px;
+        top: 300px;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 445px;
+        height: 445px;
+        background-color: #E5ECF4;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        right: -500px;
+    }
+}
+.good__item--easy::before {
+    right: -165px;
+    top: 265px;
+    transform: rotateX(180deg);
+}
+.good__item--coming::before {
+    transform: rotateY(180deg);
+    position: absolute;
+    left: -550px;
+    top: 0;
+    z-index: 1;
+}
+.good__item--coming::after {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    background-color: #E5ECF4;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: -500px;
+}
+.good__item--zero::before {
+    position: absolute;
+    right: -540px;
+    top: 78px;
+    z-index: 1;
+}
+.good__item--zero::after {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    background-color: #E5ECF4;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: -500px;
+}
+.good__content {
+    width: 445px;
+}
+.good__title {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: $accent-color;
+    margin: 0;
+}
+.good__descreption {
+    @include text;
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+@media screen and (max-width: $tablet) {
+    .good__list {
+        padding-bottom: 104px;
+    }
+    .good__item {
+        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding-bottom: 120px;
+        position: relative;
+    
+        &:nth-child(2n),
+        &::after {
+            text-align: center;
+            flex-direction: column-reverse;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    
+        &::before {
+            width: 735px;
+            height: 150px;
+            position: absolute;
+            right: -35px;
+        }
+    }
+    .good__item--coming::before {
+        left: -425px;
+    }
+    .good__item--zero::before {
+        right: -415px;
+    }
+    .good__content {
+        width: 573px;
+        padding-top: 64px;
+    }   
+    .good__title {
+        display: inline-block;
+        width: 457px;
+    }
+    .good__descreption {
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width: $mobile) {
+    .good__list {
+        width: 100%;
+    }
+    .good__item {
+        padding-bottom: 120px;
+
+        &::after {
+            display: none;
+        }
+    
+        &::before {
+            left: 0;
+            top: 165px;
+        }
+    }
+    .good__item--easy::before {
+        top: 125px;
+    }
+    .good__item--coming::before {
+        left: -510px;
+        top: 0;
+    }
+    .good__item--era::before {
+        left: -420px;
+    }
+    .good__item--zero::before {
+        left: 130px;
+        top: 0;
+    }
+    .good__content {
+        width: 100%;
+        padding-top: 56px;
+    } 
+    .good__title {
+        width: 100%;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -1.42857px;
+    }
+    .good__descreption {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .good__img {
+        width: 311px;
+        height: 311px;
+        display: block;
+    }
+}

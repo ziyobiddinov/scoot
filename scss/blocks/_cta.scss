@@ -1,0 +1,87 @@
+.cta {
+    background: url("../img/cta.jpg") no-repeat center;
+    background-size: cover; 
+}
+
+.cta__container {
+    padding: 102px 15px;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cta__title {
+    width: 415px;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: #fff;
+    margin: 0;
+}
+.cta__content {
+    @include flex;
+    align-items: center;
+}
+.cta__link {
+    margin-right: 18px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.cta__img {
+    display: block;
+}
+@media screen and (max-width: $tablet) {
+    .cta {
+        background: url("../img/cta-tablet.jpg") no-repeat center;
+        background-size: cover;
+    }
+    
+    .cta__container {
+        padding-top: 62px;
+        padding-bottom: 62px;
+        justify-content: center;
+    }
+    .cta__title {
+        text-align: center;
+        width: 457px;
+        padding-bottom: 40px;
+    }
+    .cta__link {
+        margin-right: 12px;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .cta__img {
+        display: block;
+        height: 40px;
+    }
+    .cta__app {
+        width: 114px;
+    }
+    .cta__google {
+        width: 130px;
+    }
+}
+@media screen and (max-width: $mobile) {
+    .cta {
+        background: url("../img/cta-mobile.jpg") no-repeat center;
+        background-size: cover;
+    }
+    
+   
+    .cta__container {
+        width: 100%;
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+    .cta__title {
+        width: 100%;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -1.42857px;
+    }
+}
